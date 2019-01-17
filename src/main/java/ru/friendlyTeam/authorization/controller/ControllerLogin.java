@@ -1,15 +1,24 @@
 package ru.friendlyTeam.authorization.controller;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import ru.friendlyTeam.authorization.dao.pojo.User;
+import ru.friendlyTeam.authorization.services.ServiceUsers;
 
 @Controller
 public class ControllerLogin {
+
+    ServiceUsers serviceUsers;
+
+    @Autowired
+    public void setServiceUsers(ServiceUsers serviceUsers) {
+        this.serviceUsers = serviceUsers;
+    }
 
     @RequestMapping(value = "login")
     String showLogin(
