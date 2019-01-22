@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Gwent</title>
+    <link href="./gwent.css" rel="stylesheet">
+    <link href="./login.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+</head>
+
+
+<div class="login-wrapper" class="show">
+    <div class="login">
+        <h1>GWENT</h1>
+        <form method="post">
+            <input name="u" placeholder="Username" required="required" type="text"/>
+            <input name="p" placeholder="Password" required="required" type="password"/>
+            <button class="btn btn-primary btn-block btn-large" type="submit">Играть!</button>
+        </form>
+    </div>
+</div>
+
+
+<div class="playground">
+</div>
+
+<div class="wrapper" id="opp-wrapper">
+    <div class="hand" id="opp-hand">
+        <ul>
+            <li
+                    :class="{choosed: card.isChoosed}"
+                    :style="{marginLeft: card.bias}"
+                    v-for="card in cards"
+            >
+                <img :src="card.url" alt="card" height="161px" width="87px">
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="wrapper" id="my-wrapper">
+    <div class="hand" id="my-hand">
+        <ul>
+            <li
+                    :class="{choosed: card.isChoosed}"
+                    :style="{marginLeft: card.bias}"
+                    @click="choose(card.id)"
+                    v-for="card in cards"
+            >
+                <img :src="card.url" alt="card" height="161px" width="87px">
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+
+
+<script src="./gwent.js"></script>
+
+</html>

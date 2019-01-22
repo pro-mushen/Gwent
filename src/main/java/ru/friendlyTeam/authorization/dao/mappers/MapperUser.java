@@ -18,8 +18,8 @@ public class MapperUser implements RowMapper<User> {
         user.setPassword(rs.getString("password"));
         user.setEnabled(rs.getBoolean("enabled"));
         user.setRole(rs.getString("role"));
-        user.setFullName(rs.getString("full_name"));
-        user.setMail(rs.getString("mail"));
+/*        user.setFullName(rs.getString("full_name"));
+        user.setMail(rs.getString("mail"));*/
         return user;
     }
 }

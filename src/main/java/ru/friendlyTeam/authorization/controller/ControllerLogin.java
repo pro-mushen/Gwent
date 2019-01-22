@@ -20,7 +20,7 @@ public class ControllerLogin {
         this.serviceUsers = serviceUsers;
     }
 
-    @RequestMapping(value = "login")
+    @RequestMapping(value = "/login")
     String showLogin(
             @RequestParam(value = "error", required = false) String error,
             Model model) {
@@ -43,8 +43,8 @@ public class ControllerLogin {
         User user = new User();
         user.setLogin(login);
         user.setPassword(password);
-        user.setMail(mail);
-        user.setFullName(fullName);
+/*        user.setMail(mail);
+        user.setFullName(fullName);*/
         user.setRole("ROLE_USER");
         System.out.println(login);
         System.out.println(password);

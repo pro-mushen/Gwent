@@ -4,8 +4,8 @@ public class User {
     private Integer id;
     private String login;
     private String password;
-    private String fullName;
-    private String mail;
+    /*    private String fullName;
+        private String mail;*/
     private Boolean enabled;
     private String role;
 
@@ -25,7 +25,7 @@ public class User {
         this.login = login;
     }
 
-    public String getFullName() {
+/*    public String getFullName() {
         return fullName;
     }
 
@@ -39,7 +39,7 @@ public class User {
 
     public void setMail(String mail) {
         this.mail = mail;
-    }
+    }*/
 
     public String getPassword() {
         return password;
@@ -71,8 +71,8 @@ public class User {
                 "id=" + id +
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
-                ", fullName='" + fullName + '\'' +
-                ", mail='" + mail + '\'' +
+/*                ", fullName='" + fullName + '\'' +
+                ", mail='" + mail + '\'' +*/
                 ", enabled=" + enabled +
                 ", role='" + role + '\'' +
                 '}';
