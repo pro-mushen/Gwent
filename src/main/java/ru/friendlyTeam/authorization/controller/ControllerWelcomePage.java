@@ -17,7 +17,7 @@ public class ControllerWelcomePage {
 
     @RequestMapping(value = "/gwent")
     public String showRegistrForm(Model model) {
-        return "gwent";
+        return "/html-view/pages/gwent.html";
     }
 
 }

@@ -19,12 +19,13 @@
           class="org.springframework.web.servlet.view.UrlBasedViewResolver">
         <property name="viewClass"
                   value="org.springframework.web.servlet.view.JstlView"/>
-        <property name="prefix" value="WEB-INF/pages/"/>
+        <property name="prefix" value=""/>
         <!--<property name="suffix" value=".jsp"/>-->
-        <property name="suffix" value=".jsp"/>
+        <property name="suffix" value=""/>
     </bean>
 
-    <mvc:resources mapping="/resources/**" location="/resources/"/>
+    <mvc:resources mapping="/html-view/**" location="/resources/"/>
+    <!--<mvc:resources mapping="/resources/**" location="/resources/"/>-->
     <mvc:annotation-driven/>
 
 </beans>
