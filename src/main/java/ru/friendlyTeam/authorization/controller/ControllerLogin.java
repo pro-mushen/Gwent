@@ -20,12 +20,9 @@ public class ControllerLogin {
         this.serviceUsers = serviceUsers;
     }
 
-    @RequestMapping(value = "/login")
-    String showLogin(
-            @RequestParam(value = "error", required = false) String error,
-            Model model) {
-        model.addAttribute("loginError", error);
-        return "login";
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String showloginForm(Model model) {
+        return "WEB-INF/pages/login.jsp";
     }
 
     @RequestMapping(value = "/registr", method = RequestMethod.GET)
@@ -37,14 +34,10 @@ public class ControllerLogin {
     public String addUser(
             @RequestParam(value = "userLogin") String login,
             @RequestParam(value = "userPassword") String password,
-            @RequestParam(value = "userFullName") String fullName,
-            @RequestParam(value = "userMail") String mail,
             Model model) {
         User user = new User();
         user.setLogin(login);
         user.setPassword(password);
-/*        user.setMail(mail);
-        user.setFullName(fullName);*/
         user.setRole("ROLE_USER");
         System.out.println(login);
         System.out.println(password);

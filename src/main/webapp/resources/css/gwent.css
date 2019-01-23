@@ -1,0 +1,61 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.playground {
+    width: 1200px;
+    height: 920px;
+    background: url("../img/playground.jpg") no-repeat center center;
+    background-size: contain;
+    overflow: hidden;
+
+    margin: 0 auto;
+}
+
+li {
+    display: inline-block;
+}
+
+
+.wrapper {
+    position: absolute;
+    display: flex;
+    text-align: center;
+}
+
+#my-wrapper {
+    top: 760px;
+    width: 100%;
+}
+
+#opp-wrapper {
+    top: 0;
+    width: 100%;
+}
+
+
+.hand {
+    width: 100%;
+}
+
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+#my-hand ul {
+    cursor: pointer;
+}
+
+#my-hand li:hover:not(.choosed) {
+    opacity: 0.5;
+}
+
+#my-hand li.choosed {
+    transform: translateY(-15px) scale(1.1);
+}

@@ -23,8 +23,8 @@
         <property name="suffix" value=""/>
     </bean>
 
-    <mvc:resources mapping="/html-view/**" location="/resources/"/>
-    <!--<mvc:resources mapping="/resources/**" location="/resources/"/>-->
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
+
     <mvc:annotation-driven/>
 
 </beans>
